@@ -2,12 +2,12 @@
 //creo un array con i membri del team
 const membriTeam = [
     
-    creaMembroTeam ('Wayne Barnett', 'Founder & CEO', './Bonus/img/wayne-barnett-founder-ceo.jpg'),
-    creaMembroTeam ('Angela Caroll', 'Chief Editor', './Bonus/img/angela-caroll-chief-editor.jpg'),
-    creaMembroTeam ('Walter Gordon', 'Office Manager', './Bonus/img/walter-gordon-office-manager.jpg'),
-    creaMembroTeam ('Angela Lopez', 'Social Media Manager', './Bonus/img/angela-lopez-social-media-manager.jpg'),
-    creaMembroTeam ('Scott Estrada', 'Developer', './Bonus/img/scott-estrada-developer.jpg'),
-    creaMembroTeam ('Barbara Ramo', 'Graphic Designer', './Bonus/img/barbara-ramos-graphic-designer.jpg'),
+    creaMembroTeam ('Wayne Barnett', 'Founder & CEO', './img/wayne-barnett-founder-ceo.jpg'),
+    creaMembroTeam ('Angela Caroll', 'Chief Editor', './img/angela-caroll-chief-editor.jpg'),
+    creaMembroTeam ('Walter Gordon', 'Office Manager', './img/walter-gordon-office-manager.jpg'),
+    creaMembroTeam ('Angela Lopez', 'Social Media Manager', '.img/angela-lopez-social-media-manager.jpg'),
+    creaMembroTeam ('Scott Estrada', 'Developer', './img/scott-estrada-developer.jpg'),
+    creaMembroTeam ('Barbara Ramo', 'Graphic Designer', './img/barbara-ramos-graphic-designer.jpg'),
 ]
 
 
@@ -25,8 +25,9 @@ function onLoop(membroTeam, i, array) {
    listaElRole.innerHTML += `<li>${membroTeam.ruolo}</li>`
 //    listaElPic.innerHTML +=  `<img>${membroTeam.foto}</img>`   prova sbagliata
     let img = document.createElement("img"); 
-    img.src = membriTeam.foto; 
-    let src = document.getElementById("pic-profile"); 
+    img.classList.add('img')
+    img.src = membroTeam.foto; 
+    let src = document.querySelector(".pic-profile"); 
     src.appendChild(img); 
 }
 
